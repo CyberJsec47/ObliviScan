@@ -3,7 +3,7 @@
 --- 
 
 
-#### The goal of this project is to incorporate ML and AI with an embedded system to detect the presence of a drone then to use infrared sensoring to locate the drone.<br> The end product is aimed to be a portable, discrete device built inside a flight case
+#### The goal of this project is to incorporate ML and AI with an embedded system to detect the presence of a drone then to use infrared sensoring to locate the drone.<br> 
 
 
 #### The working idea of this project will be the following
@@ -21,9 +21,6 @@
 - Raspberry Pi AI HAT+ 16tops with Hailo chip
 - HackRF One and ANT500 antenna
 - Raspberry Pi camera module 3 noIR
-- Flight case
-- External power bank
-- Pan Tilt platform or single servo 
 - Waveshare 4.3" touch screen
 - Wireless mini keyboard 
 
@@ -33,33 +30,25 @@
 
 #### Phase 1:
 
-- Collecting drone RF data **Completed, more data can be collected if needed**
-- Collecting RF background noise **Completed, More data can be collected if needed**
-- Train and evaluate ML models for performance **In process**
-- Test with live drone **Starting tests for accuracy**
+- Collecting drone RF data **Completed**
+- Collecting RF background noise **Completed**
+- Train and evaluate ML models for performance **Completed**
+- Test with live drone **Completed**
 
 #### Phase 2:
 
 - Set up Ai HAT+ and camera module **Completed**
-- Setup and test object detection with YOLOv11 or latest 
-- Collect IR images of drones
-- Label images and train YOLO model
-- setup and test servo movernment 
+- Setup and test object detection with YOLOv8 or latest **Completed** 
+- Collect IR images of drones **Completed**
+- Label images and train YOLO model **Completed**
 
 #### Phase 3:
 
-- Move all programs onto raspberry Pi and test all equipment
-- Test equipment and program on the Pi
-- Develop a final program 
-- Live tests with drone 
-
-#### Phase 4:
-
-- Design flight case
-- Attach servo mounted camera module and test moverability 
-- Finialise project 
-- Live test as a final product 
-
+- Move all programs onto raspberry Pi and test all equipment **Completed**
+- Test equipment and program on the Pi **Completed**
+- Develop a final program **Completed**
+- Live tests with drone **Completed**
+- 
 --- 
 
 ### Current plan / Idea
@@ -74,16 +63,6 @@
 - Use IR images of a drone to train a YOLO model to track the drone using bounding boxes
 - Attach the camera to a servo which rotates the camera over a 180 degree range to try and find the drone
 - Attach camera to pan tilt kit so the camera can folllow the drone as it moves. This idea might change based on field of view of camera and complexity of the tracking
-
-### Building inside a flight case
-
-- Use a flight case or simular to hide devices to stay portable and hidden
-- Attach camera where it can rotate or onto the pan tilt kit
-- If not using attach camera inside floghtcase and cut hole out where it can see from
-- The case is portable so can be manually moved if needed
-
-
-##### This product aim is to be portable and automated with little user interaction, it would be nice to use a rotating camera or a camera on the pan tilt platform to track a drone as it moves around rather than just on screen
 
 --- 
 
@@ -117,48 +96,6 @@
 <br>
 
 ##### Most Accurate models: KNN / Random Forest
---- 
 
-#### Testing models with live data:
-
-- **results Random Forest**:
-
-| No drone    | Drone |
-| -------- | ------- |
-|The predicted classification is: **Drone** 71.00%       | The predicted classification is: **Drone** 100.00%    |
-| The predicted classification is: **Drone** 69.00%      | The predicted classification is: **Drone** 100.00%    |
-| The predicted classification is: **Drone** 73.00%      | The predicted classification is: **Drone** 78.00%     |
-| The predicted classification is: **No Drone** 52.00%   | The predicted classification is: **Drone** 78.00%     |
-| The predicted classification is: **Drone** 86.00%      | The predicted classification is: **Drone** 100.00%    |
-| The predicted classification is: **Drone** 77.00%      | The predicted classification is: **Drone** 100.00%    |
-| The predicted classification is: **Drone** 95.00%      | The predicted classification is: **Drone** 100.00%    |      
-| The predicted classification is: **No Drone**84.00%    | The predicted classification is: **Drone** 100.00%    |
-| The predicted classification is: **Drone** 61.00%      | The predicted classification is: **Drone** 86.00%     |
-| The predicted classification is: **Drone** 66.00%      | The predicted classification is: **Drone** 95.00%     |
-| The predicted classification is: **Drone** 68.00%      | The predicted classification is: **Drone** 78.00%     |
-
-
-- **results KNN**:
-
-| No drone    | Drone |
-| -------- | ------- |
-| The predicted classification is: **No Drone** 50.00%   | The predicted classification is: **Drone** 100.00%    |
-| The predicted classification is: **Drone** 100.00%     | The predicted classification is: **Drone** 100.00%    | 
-| The predicted classification is: **No Drone** 50.00%   | The predicted classification is: **Drone** 100.00%    |
-| The predicted classification is: **No Drone** 50.00%   | The predicted classification is: **Drone** 100.00%    |
-| The predicted classification is: **No Drone** 50.00%   | The predicted classification is: **Drone** 100.00%    |
-| The predicted classification is: **No Drone**50.00%    | The predicted classification is: **Drone** 100.00%    |
-| The predicted classification is: **Drone** 100.00%     | The predicted classification is: **Drone** 100.00%    |
-| The predicted classification is: **No Drone** 50.00%   | The predicted classification is: **Drone** 100.00%    |
-| The predicted classification is: **No Drone** 50.00%   | The predicted classification is: **Drone** 100.00%    |
-| The predicted classification is: **Drone** 100.00%     | The predicted classification is: **Drone** 100.00%    |
-| The predicted classification is: **No Drone** 50.00%   | The predicted classification is: **Drone** 100.00%    |
-
-#### Results:
-
-- **Random Forest**: Out of the 11 WiFi channels scanned for signs of drone acitvity, 9 channels had false classification but when a drone was flying it successfully classifed all the activity
-<br>
-
-- **KNN**: Out of the 11 WiFi channels scanned for signs of drone acitvity, 3 channels had false classification but when a drone was flying it successfully classifed all the activity 
 
 
