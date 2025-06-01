@@ -78,24 +78,24 @@
 #### ML outcomes:
 - Training, tuned and evaluted models have the following scores:<br>
     **Random Forest accuracy: 0.9356**
-    - Confusion Matrix Random Forest
-    [91 5]
-    [8 98]<br>
     **Decision Tree accuracy: 0.8911**
-    - Confusion Matrix Decision Tree
-    [85 11]
-    [11 95]<br>
     **SVM accuracy: 0.9257**
-    - Confusion Matrix SVM:
-    [88 8]
-    [7 99]<br>
     **KNN accruacy: 0.9356**
-    - Confusion Matrix KNN
-    [93 3]
-    [10 96]
 <br>
 
-##### Most Accurate models: KNN / Random Forest
+#### AI Training:
+- images captured by using Python to automate image capture everyy 5 seconds as the drone flies
+- over 200 images of the drone in various positions and lighting conditions taken
+- images taken without the drone used as background and unlabeled images
+- Label-Studio was used to label each image of drone
+- YOLOv8n model was trained on this data set
+- Converted .pt to .onnx
+- itergrated with Hailo software by converting the onnx to a hef file the Hailo chip can use
+- tests show the drone is successfuly tracked
 
+#### Testing:
+- Image 1
+- Image 2
+- GIF
 
 
