@@ -79,8 +79,8 @@
 - tests show the drone is successfuly tracked
 
 #### Testing:
-- <img src="images/No_drone_detected.jpg" width="400" height="600">
-- <img src="images/Drone_detected.jpg" width="400" height="600">
-- <img src="images/Drone_detect.gif" width="400" height="600">
+- <img src="images/No_drone_detected.jpg" width="500" height="600">
+- <img src="images/Drone_detected.jpg" width="500" height="600">
+- <img src="images/Drone_detect.gif" width="600" height="400">
 
 
